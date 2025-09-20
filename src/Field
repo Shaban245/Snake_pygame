@@ -1,0 +1,12 @@
+
+class Field:
+    
+    def __init__(self, witdh: int , heigth: int, rgb_lst: list):
+        self.witdh = witdh
+        self.heigth = heigth
+        self.rgb_lst= rgb_lst
+        
+        
+    
+    
+        
