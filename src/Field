@@ -1,10 +1,17 @@
 
 class Field:
     
-    def __init__(self, witdh: int , heigth: int, rgb_lst: list):
+    def __init__(self, witdh: int , heigth: int, rgb_color: list):
         self.witdh = witdh
         self.heigth = heigth
-        self.rgb_lst= rgb_lst
+        self.rgb_color= rgb_color
+        
+    
+    def screen_display(self):
+        return pygame.display.set_mode((self.heigth, self.witdh))
+    
+    def fiil_display(self, screen):
+        screen.fill(self.rgb_color)
         
         
     
