@@ -1,27 +1,22 @@
 import pygame
-import random
+from src.Game import Game
+import constants
 
 pygame.init()
 
-# Настройки окна
-WIDTH, HEIGHT = 600, 400
-fps= 1
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Змейка")
-clock = pygame.time.Clock()
-snake = pygame.image.load('images/tarzan.jpg')
+game = Game()
 
 
-x, y = WIDTH / 2, HEIGHT / 2
+
+
 
 while True:
     pygame.display.update()
-    screen.fill((51, 255 , 51))
-    screen.blit(snake, (x, y))
-    clock.tick(fps)
+    Game.screen.fill(game.field.rgb_color)
+    game.screen.blit(game.snake.image, (game.snake.x_position, game.snake.y_position))
+    game.clock.tick(constants.FPS)
     
-    if x > WIDTH or y > HEIGHT:
-        exit()
+
     
     
     for event in pygame.event.get():
@@ -29,12 +24,12 @@ while True:
             exit()
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_d:
-                x += 5
+                game.snake.change_direction(game.snake.dict_direction[constants.rigth])
             elif event.key == pygame.K_w:
-                y -= 5
+                game.snake.change_direction(game.snake.dict_direction[constants.up])
             elif event.key == pygame.K_s:
-                y += 5
+                game.snake.change_direction(game.snake.dict_direction[constants.down])
             elif event.key == pygame.K_a:
-                x -= 5
+                game.snake.change_direction(game.snake.dict_direction[constants.left])
     
     

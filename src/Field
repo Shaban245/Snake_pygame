@@ -1,17 +1,16 @@
+import src.constants
 
 class Field:
     
-    def __init__(self, witdh: int , heigth: int, rgb_color: list):
-        self.witdh = witdh
-        self.heigth = heigth
-        self.rgb_color= rgb_color
+    def __init__(self):
+        self.witdh = src.constants.WIDTH_field
+        self.heigth = src.constants.HEIGHT_field
+        self.rgb_color= src.constants.rgb_color_field
         
     
-    def screen_display(self):
-        return pygame.display.set_mode((self.heigth, self.witdh))
+           
     
-    def fiil_display(self, screen):
-        screen.fill(self.rgb_color)
+
         
         
     
