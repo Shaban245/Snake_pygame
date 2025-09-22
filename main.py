@@ -14,6 +14,8 @@ while True:
 
     game.update_screen(game)
     game.blit_snake(game)
+    game.blit_chery(game)
+    game.eat_chery(game)
     game.clock_tick(game)
     
 

@@ -1,6 +1,7 @@
+import pygame
 from src.field import Field
 from src.Snake import Snake
-import pygame
+from src.chery import Chery
 from src.constants import FPS
 
 
@@ -9,6 +10,7 @@ class Game:
     def __init__(self):
         self.snake = Snake()
         self.field = Field()
+        self.chery = Chery()
         self.clock = pygame.time.Clock()
         self.fps = FPS
         self.screen = pygame.display.set_mode((self.field.width, self.field.heigth))
@@ -22,3 +24,11 @@ class Game:
         
     def clock_tick(self, game) -> None:
         game.clock.tick(self.fps)
+    
+    def blit_chery(self, game) -> None:
+        game.screen.blit(game.chery.image, (game.chery.x_cor, game.chery.y_cor))
+        
+    def eat_chery(self, game) -> None:
+        if (game.snake.x_position == game.chery.x_cor) and ((game.snake.y_position == game.chery.y_cor)):
+            game.chery.generate_new_position()
+        

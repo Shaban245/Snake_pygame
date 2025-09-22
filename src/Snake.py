@@ -1,5 +1,5 @@
 import src.constants
-import images
+import resourse
 import pygame
 
 class Snake:
@@ -9,7 +9,7 @@ class Snake:
         self.y_position = src.constants.y_cor_snake
         self.x_speed = 5
         self.y_speed = 0
-        self.image = pygame.image.load('images/tarzan.jpg')
+        self.image = pygame.image.load('resourse/tarzan.jpg')
         self.dict_direction = src.constants.dict_direction
         
         
