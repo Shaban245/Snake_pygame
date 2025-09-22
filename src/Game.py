@@ -1,5 +1,6 @@
-from src.Field import Field
+from src.field import Field
 from src.Snake import Snake
+import pygame
 
 
 class Game:
