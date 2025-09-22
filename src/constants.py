@@ -1,5 +1,5 @@
 
-WIDTH_field =  700
+WIDTH_field =  1000
 HEIGHT_field = 700
 rgb_color_field = (51, 255 , 51)
 FPS = 10
@@ -16,3 +16,6 @@ rigth = "rigth"
 left = 'left'
 up = 'up'
 down = 'down'
+
+allowed_chery_x = WIDTH_field - 50
+allowed_chery_y = HEIGHT_field - 50

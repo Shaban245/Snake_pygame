@@ -11,10 +11,10 @@ game = Game()
 
 
 while True:
-    pygame.display.update()
-    game.screen.fill(game.field.rgb_color)
-    game.screen.blit(game.snake.image, (game.snake.x_position, game.snake.y_position))
-    game.clock.tick(constants.FPS)
+
+    game.update_screen(game)
+    game.blit_snake(game)
+    game.clock_tick(game)
     
 
     
