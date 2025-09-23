@@ -18,6 +18,9 @@ class Game:
     def update_screen(self, game) -> None:
         pygame.display.update()
         game.screen.fill(game.field.rgb_color)
+        self.blit_snake(game)
+        self.blit_chery(game)
+        self.clock_tick(game)
         
     def blit_snake(self, game) -> None:
         game.screen.blit(game.snake.image, (game.snake.x_position, game.snake.y_position))
