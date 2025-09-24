@@ -32,6 +32,8 @@ class Game:
         game.screen.blit(game.chery.image, (game.chery.x_cor, game.chery.y_cor))
         
     def eat_chery(self, game) -> None:
-        if self.snake.rect_snake.collidepoint(self.chery.rect_chery.center):
+        if self.snake.rect_snake.colliderect(self.chery.rect_chery):
             game.chery.generate_new_position()
+        
+    
         
