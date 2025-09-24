@@ -28,3 +28,4 @@ rect_heigth_chery = 15
 
 score_x_cor = 50
 score_y_cor = 50
+size_font = 50
