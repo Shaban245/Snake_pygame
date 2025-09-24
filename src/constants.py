@@ -19,6 +19,8 @@ down = 'down'
 
 allowed_chery_x = WIDTH_field - 50
 allowed_chery_y = HEIGHT_field - 50
+min_chery_x = 60
+min_chery_y = 60
 
 rect_width_snake = 15
 rect_heigth_snake = 15
