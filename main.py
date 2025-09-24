@@ -32,6 +32,6 @@ while True:
             elif event.key == pygame.K_a:
                 game.snake.change_direction(game.snake.dict_direction[constants.left])
             
-    game.snake.move()
+    
     
     

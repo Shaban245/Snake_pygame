@@ -2,7 +2,7 @@ import pygame
 from src.field import Field
 from src.Snake import Snake
 from src.chery import Chery
-from src.constants import FPS
+from src import constants
 from src.score import Score
 
 
@@ -14,7 +14,7 @@ class Game:
         self.chery = Chery()
         self.score = Score()
         self.clock = pygame.time.Clock()
-        self.fps = FPS
+        self.fps = constants.FPS
         self.screen = pygame.display.set_mode((self.field.width, self.field.heigth))
     
     def update_screen(self, game) -> None:
@@ -24,6 +24,9 @@ class Game:
         self.blit_snake(game)
         self.clock_tick(game)
         self.blit_score(game)
+        self.snake.move()
+        self.out_of_Field()
+
         
     def blit_snake(self, game) -> None:
         game.screen.blit(game.snake.image, (game.snake.x_position, game.snake.y_position))
@@ -41,6 +44,14 @@ class Game:
         if self.snake.rect_snake.colliderect(self.chery.rect_chery):
             game.chery.generate_new_position()
             game.score.update_score()
+            
+    def out_of_Field(self):
+        if self.snake.x_position > constants.rigth_limits_field or self.snake.x_position < constants.left_limits_field:
+            exit()
+        elif self.snake.y_position > constants.down_lomits_field or self.snake.y_position < constants.upper_limits_field:
+            exit()
+        
+
         
     
         

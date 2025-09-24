@@ -25,7 +25,8 @@ class Snake:
     def change_direction(self, dict: dict) -> None:
         self.x_speed , self.y_speed = dict[0], dict[1]
         
-    
+
+            
         
         
     
