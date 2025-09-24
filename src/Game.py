@@ -18,8 +18,8 @@ class Game:
     def update_screen(self, game) -> None:
         pygame.display.update()
         game.screen.fill(game.field.rgb_color)
-        self.blit_snake(game)
         self.blit_chery(game)
+        self.blit_snake(game)
         self.clock_tick(game)
         
     def blit_snake(self, game) -> None:
@@ -32,6 +32,6 @@ class Game:
         game.screen.blit(game.chery.image, (game.chery.x_cor, game.chery.y_cor))
         
     def eat_chery(self, game) -> None:
-        if (game.snake.x_position == game.chery.x_cor) and ((game.snake.y_position == game.chery.y_cor)):
+        if self.snake.rect_snake.collidepoint(self.chery.rect_chery.center):
             game.chery.generate_new_position()
         

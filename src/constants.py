@@ -2,16 +2,16 @@
 WIDTH_field =  1000
 HEIGHT_field = 700
 rgb_color_field = (51, 255 , 51)
-FPS = 30
+FPS = 20
 
 x_cor_snake = WIDTH_field /2
 y_cor_snake = HEIGHT_field / 2
 x_speed = 5
 y_speed = 0
-dict_direction = {"rigth": (1, 0),
-                  "left": (-1, 0),
-                  "up": (0, -1),
-                  "down": (0, 1)}
+dict_direction = {"rigth": (5, 0),
+                  "left": (-5, 0),
+                  "up": (0, -5),
+                  "down": (0, 5)}
 rigth = "rigth"
 left = 'left'
 up = 'up'
@@ -19,3 +19,9 @@ down = 'down'
 
 allowed_chery_x = WIDTH_field - 50
 allowed_chery_y = HEIGHT_field - 50
+
+rect_width_snake = 10
+rect_heigth_snake = 10
+
+rect_width_chery = 0
+rect_heigth_chery = 0
