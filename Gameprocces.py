@@ -8,8 +8,8 @@ def main():
 
     while True:
 
-        game.update_screen(game)
-        game.eat_chery(game)
+        game.update_screen()
+        game.eat_chery()
 
         
 
