@@ -35,5 +35,5 @@ size_font = 50
 
 upper_limits_field = -10
 left_limits_field = -10
-down_lomits_field = HEIGHT_field
-rigth_limits_field = WIDTH_field
+down_lomits_field = HEIGHT_field -10
+rigth_limits_field = WIDTH_field -10
